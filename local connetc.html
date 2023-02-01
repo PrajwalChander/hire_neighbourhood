@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Local Worker Connect</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+  </head>
+  <body>
+    <header><center>
+      <img src="logoo.png" alt="Local Worker Connect logo">
+     <h1>Local Worker Connect</h1></center>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <main><center>
+	<div class="search-container">
+  		<form>
+    			<input type="text" placeholder="Search for a worker..." id="search-input">
+    			<button type="submit">Search</button>
+  		</form>
+	</div></center>
+      <section class="worker-list">
+        <div class="worker" onclick="openProfile('John Doe', 'Plumber', 4, 'avatar1.jpg', 'New York')">
+          <img src="avatar1.jpg" alt="John Doe's avatar">
+          <h2>John Doe</h2>
+          <p>Plumber</p>
+        </div>
+        <div class="worker" onclick="openProfile('Jane Doe', 'Carpenter', 5, 'avatar2.png', 'Los Angeles')">
+          <img src="avatar2.png" alt="Jane Doe's avatar">
+          <h2>Jane Doe</h2>
+          <p>Carpenter</p>
+        </div>
+        <div class="worker" onclick="openProfile('Jim Smith', 'Painter', 3, 'avatar1.jpg', 'Chicago')">
+          <img src="avatar1.jpg" alt="Jim Smith's avatar">
+          <h2>Jim Smith</h2>
+          <p>Painter</p>
+        </div>
+        <div class="worker" onclick="openProfile('Jack Ryan', 'Electrician', 4, 'avatar2.png', 'Houston')">
+          <img src="avatar2.png" alt="Jack Ryan's avatar">
+          <h2>Jack Ryan</h2>
+          <p>Electrician</p>
+        </div>
+        <div class="worker" onclick="openProfile('Jill Johnson', 'Mechanic', 5, 'avatar1.jpg', 'Phoenix')">
+          <img src="avatar1.jpg" alt="Jill Johnson's avatar">
+          <h2>Jill Johnson</h2>
+          <p>Mechanic</p>
+        </div>
+<div class="worker" onclick="openProfile('Kapil', 'Carpenter', 4, 'avatar1.jpg', 'New York')">
+          <img src="avatar1.jpg" alt="Kapil's avatar">
+          <h2>Kapil</h2>
+          <p>Carpenter</p>
+        </div>
+  <div class="worker" onclick="openProfile('Michael Brown', 'HVAC Technician', 5, 'avatar2.png', 'Atlanta')">
+          <img src="avatar2.png" alt="Michael Brown's avatar">
+          <h2>Michael Brown</h2>
+          <p>HVAC Technician</p>
+        </div>
+      <center></section>
+      <section id="worker-profile">
+        <img id="worker-avatar" src="" alt="Worker avatar">
+        <h2 id="worker-name"></h2>
+        <p id="worker-title"></p>
+        <p id="worker-rating"></p>
+        <p>Location: <span id="worker-location"></span></p>
+        <p>Open Hours: <span id="worker-hours"></span></p>
+        <p>Phone: <span id="worker-phone"></span></p>
+        <p>Payment: <span id="worker-payment"></span></p>
+          <form action="submit-review.php" method="post">
+            <textarea id="message" required></textarea><br>
+            <input type="submit" value="Submit">
+          </form>
+          <button id="back-button" onclick="closeProfile()">Back</button>
+        </section>
+      </center>
+    </main>
+<script src="script.js"></script>
+    <footer>
+      <p>&copy; 2023 Local Worker Connect</p>
+    </footer>
+  </body>
+</html
